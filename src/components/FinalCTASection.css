@@ -1,0 +1,38 @@
+.final-cta-section {
+  background-color: var(--color-bg-light);
+  border-top: 1px solid var(--color-border);
+  padding: 4.5rem 0;
+}
+
+.final-cta-box {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.final-cta-headline {
+  color: var(--color-primary);
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  margin-bottom: 1rem;
+}
+
+.final-cta-subtext {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  margin-bottom: 2rem;
+}
+
+.final-cta-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 480px) {
+  .final-cta-actions {
+    flex-direction: column;
+  }
+  .final-btn {
+    width: 100%;
+  }
+}

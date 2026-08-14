@@ -1,0 +1,119 @@
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.contact-info-col h2 {
+  margin-bottom: 1rem;
+}
+
+.contact-cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin: 2rem 0;
+}
+
+.contact-card-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background-color: var(--color-bg-light);
+  border: 1px solid var(--color-border);
+  padding: 1.25rem;
+  border-radius: var(--radius-md);
+}
+
+.contact-item-icon {
+  color: var(--color-accent);
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+.contact-card-item strong {
+  display: block;
+  font-size: 0.92rem;
+  color: var(--color-primary);
+}
+
+.contact-card-item p {
+  margin: 0;
+  font-size: 0.98rem;
+  color: var(--color-text-main);
+}
+
+.contact-ask-callout {
+  background-color: var(--color-accent-light);
+  border: 1px solid #BFDBFE;
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  margin-top: 1rem;
+}
+
+.contact-ask-callout h3 {
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.contact-ask-callout p {
+  font-size: 0.95rem;
+  margin-bottom: 1.25rem;
+}
+
+.contact-form-card {
+  background-color: var(--color-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem;
+  box-shadow: var(--shadow-md);
+}
+
+.contact-form-card h3 {
+  font-size: 1.35rem;
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--color-accent-light);
+}
+
+.contact-disclosure {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.contact-success-box {
+  padding: 2rem 1rem;
+}
+
+.contact-map-frame-box {
+  background-color: var(--color-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-map-iframe {
+  width: 100%;
+  border: none;
+  display: block;
+  aspect-ratio: 16 / 9;
+  min-height: 260px;
+}
+
+.contact-map-bar {
+  background-color: var(--color-bg-light);
+  border-top: 1px solid var(--color-border);
+  padding: 1rem;
+}

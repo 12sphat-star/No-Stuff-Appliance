@@ -1,0 +1,237 @@
+.hero-section {
+  background: linear-gradient(180deg, #EFF6FF 0%, #FFFFFF 100%);
+  padding: 3.5rem 0 4.5rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (max-width: 992px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.4rem 0.95rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 1.25rem;
+  border: 1px solid #BFDBFE;
+  box-shadow: var(--shadow-sm);
+}
+
+.hero-title {
+  color: var(--color-primary);
+  font-size: clamp(2.2rem, 4.2vw, 3.4rem);
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.03em;
+}
+
+.title-highlight {
+  color: var(--color-accent);
+}
+
+.hero-subtitle {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  margin-bottom: 1.75rem;
+  max-width: 620px;
+}
+
+.hero-benefits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-text-main);
+}
+
+.benefit-icon {
+  color: var(--color-accent);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.hero-btn-main {
+  font-size: 1.05rem;
+  padding: 0.95rem 1.8rem;
+  box-shadow: var(--shadow-md);
+}
+
+.hero-btn-sub {
+  font-size: 1.05rem;
+  padding: 0.95rem 1.6rem;
+}
+
+@media (max-width: 480px) {
+  .hero-actions {
+    flex-direction: column;
+  }
+  .hero-btn-main, .hero-btn-sub {
+    width: 100%;
+  }
+}
+
+/* Hero Media Frame */
+.hero-media {
+  position: relative;
+}
+
+.main-hero-card {
+  position: relative;
+  background-color: var(--color-secondary);
+  border-radius: var(--radius-lg);
+  padding: 0.75rem;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--color-border);
+}
+
+.hero-frame-lineup {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  height: 380px;
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+}
+
+@media (max-width: 768px) {
+  .hero-frame-lineup {
+    height: 260px;
+    padding: 0.5rem;
+  }
+}
+
+.hero-img-lineup {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  transition: transform 0.4s ease;
+}
+
+.main-hero-card:hover .hero-img-lineup {
+  transform: scale(1.03);
+}
+
+.hero-img-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background-color: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(8px);
+  color: #FFFFFF;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.badge-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #22C55E;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Hero Floating Overlay Card */
+.hero-overlay-card {
+  position: absolute;
+  bottom: -24px;
+  left: -20px;
+  background-color: var(--color-secondary);
+  border-radius: var(--radius-md);
+  padding: 0.85rem;
+  box-shadow: var(--shadow-widget);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  max-width: 360px;
+  z-index: 10;
+}
+
+@media (max-width: 600px) {
+  .hero-overlay-card {
+    position: static;
+    margin-top: 0.75rem;
+    max-width: 100%;
+    bottom: auto;
+    left: auto;
+  }
+}
+
+.hero-overlay-thumb {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  object-position: center top;
+  border: 1px solid var(--color-border);
+  flex-shrink: 0;
+}
+
+.hero-overlay-info strong {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--color-primary);
+  line-height: 1.25;
+}
+
+.hero-overlay-info p {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin: 0.2rem 0 0.35rem 0;
+  line-height: 1.3;
+}
+
+.hero-overlay-link {
+  background: none;
+  border: none;
+  color: var(--color-accent);
+  font-weight: 700;
+  font-size: 0.82rem;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.hero-overlay-link:hover {
+  color: var(--color-primary-hover);
+}

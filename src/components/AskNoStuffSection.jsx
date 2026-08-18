@@ -15,9 +15,12 @@ export default function AskNoStuffSection({ onOpenAskWidget }) {
     <section className="section ask-section">
       <div className="container">
         <div className="ask-box">
-          <div className="ask-icon-badge">
-            <Sparkles size={26} aria-hidden="true" />
-          </div>
+          <div className="ask-harry-image">
+  <img
+    src="/images/ask-harry.png"
+    alt="Ask Harry at No Stuff Appliances"
+  />
+</div>
 
           <span className="ask-section-tag">Signature Customer Feature</span>
           <h2 className="ask-headline">Confused About an Appliance? Just Ask Harry.</h2>

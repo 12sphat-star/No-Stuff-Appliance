@@ -35,3 +35,41 @@
   background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
   border-radius: var(--radius-md);
 }
+
+.about-harry-photo {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #f1f5f9;
+}
+
+.about-harry-photo img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.about-harry-caption {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 16px;
+  background: rgba(7, 20, 38, 0.9);
+  color: #ffffff;
+  border-radius: 10px;
+}
+
+.about-harry-caption strong {
+  font-size: 1rem;
+}
+
+.about-harry-caption span {
+  margin-top: 2px;
+  font-size: 0.8rem;
+  opacity: 0.85;
+}

@@ -2,6 +2,7 @@ import React from 'react';
 import SEOHead from '../components/SEOHead';
 import Hero from '../components/Hero';
 import ApplianceCategories from '../components/ApplianceCategories';
+import ServiceSection from '../components/ServiceSection';
 import WhyNoStuff from '../components/WhyNoStuff';
 import GalleryPreview from '../components/GalleryPreview';
 import AskNoStuffSection from '../components/AskNoStuffSection';
@@ -22,11 +23,14 @@ export default function Home({ onOpenAskWidget }) {
       {/* 1. Hero */}
       <Hero onOpenAskWidget={onOpenAskWidget} />
 
-      {/* 2. Appliance Categories */}
-      <ApplianceCategories onOpenAskWidget={onOpenAskWidget} />
+     {/* 2. Appliance Categories */}
+<ApplianceCategories onOpenAskWidget={onOpenAskWidget} />
 
-      {/* 3. Why No Stuff */}
-      <WhyNoStuff onOpenAskWidget={onOpenAskWidget} />
+{/* 3. Appliance Repair & Service */}
+<ServiceSection onOpenAskWidget={onOpenAskWidget} />
+
+{/* 4. Why No Stuff */}
+<WhyNoStuff onOpenAskWidget={onOpenAskWidget} />
 
       {/* 4. Featured Photos */}
       <GalleryPreview />

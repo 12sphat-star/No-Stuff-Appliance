@@ -80,11 +80,11 @@ export default function Hero({ onOpenAskWidget }) {
             </div>
 
             <div className="hero-overlay-card">
-              <img 
-                src="/images/harry-cole-storefront.png" 
-                alt="Harry Cole at No Stuff Appliances"
-                className="hero-overlay-thumb"
-              />
+             <img 
+  src="/images/ask-harry.png" 
+  alt="Ask Harry at No Stuff Appliances"
+  className="hero-overlay-thumb"
+/>
               <div className="hero-overlay-info">
                 <strong>Have a question for Harry?</strong>
                 <p>Get straightforward answers on sizes & availability.</p>

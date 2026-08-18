@@ -94,3 +94,18 @@
   color: #93C5FD;
   margin-top: 1.25rem;
 }
+
+.ask-harry-image {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 1.25rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.ask-harry-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}

@@ -46,13 +46,19 @@ export default function Footer({ onOpenAskWidget }) {
                 <MapPin size={18} className="contact-icon" />
                 <span>{businessInfo.fullAddress}</span>
               </li>
+             <li>
+  <Phone size={18} className="contact-icon" />
+  <a
+    href="tel:+17575437133"
+    className="footer-phone-link"
+    aria-label="Call Harry Cole at No Stuff Appliances"
+  >
+    Harry Cole: {businessInfo.phone}
+  </a>
+</li>
               <li>
-                <Phone size={18} className="contact-icon" />
-                <span>Harry Cole: {businessInfo.phone}</span>
-              </li>
-              <li>
-                <Mail size={18} className="contact-icon" />
-                <span>Direct Inquiry: Ask Harry Widget</span>
+               <Mail size={18} className="contact-icon" />
+<span>Questions or Service Requests</span>
               </li>
             </ul>
             <div className="footer-cta-box">
@@ -73,10 +79,10 @@ export default function Footer({ onOpenAskWidget }) {
             &copy; {currentYear} {businessInfo.name}. All rights reserved. {businessInfo.fullAddress}.
           </p>
           <div className="footer-legal">
-            <span className="legal-link">Privacy Policy (Placeholder)</span>
-            <span className="legal-divider">•</span>
-            <span className="legal-link">Terms of Service (Placeholder)</span>
-          </div>
+  <Link to="/privacy" className="legal-link">Privacy Policy</Link>
+  <span className="legal-divider">•</span>
+  <Link to="/terms" className="legal-link">Terms of Service</Link>
+</div>
         </div>
       </div>
     </footer>

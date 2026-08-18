@@ -8,6 +8,8 @@ import About from './pages/About';
 import Gallery from './pages/Gallery';
 import FAQ from './pages/FAQ';
 import Contact from './pages/Contact';
+import Privacy from './pages/Privacy';
+import Terms from './pages/Terms';
 
 // Scroll to top automatically on route changes
 function ScrollToTop() {
@@ -40,13 +42,15 @@ export default function App() {
       <ScrollToTop />
       <Header onOpenAskWidget={handleOpenAskWidget} />
       
-      <Routes>
-        <Route path="/" element={<Home onOpenAskWidget={handleOpenAskWidget} />} />
-        <Route path="/about" element={<About onOpenAskWidget={handleOpenAskWidget} />} />
-        <Route path="/gallery" element={<Gallery onOpenAskWidget={handleOpenAskWidget} />} />
-        <Route path="/faq" element={<FAQ onOpenAskWidget={handleOpenAskWidget} />} />
-        <Route path="/contact" element={<Contact onOpenAskWidget={handleOpenAskWidget} />} />
-      </Routes>
+    <Routes>
+  <Route path="/" element={<Home onOpenAskWidget={handleOpenAskWidget} />} />
+  <Route path="/about" element={<About onOpenAskWidget={handleOpenAskWidget} />} />
+  <Route path="/gallery" element={<Gallery onOpenAskWidget={handleOpenAskWidget} />} />
+  <Route path="/faq" element={<FAQ onOpenAskWidget={handleOpenAskWidget} />} />
+  <Route path="/contact" element={<Contact onOpenAskWidget={handleOpenAskWidget} />} />
+  <Route path="/privacy" element={<Privacy />} />
+  <Route path="/terms" element={<Terms />} />
+</Routes>
 
       <Footer onOpenAskWidget={handleOpenAskWidget} />
 

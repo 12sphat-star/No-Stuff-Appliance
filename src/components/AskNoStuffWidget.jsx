@@ -6,13 +6,14 @@ import './AskNoStuffWidget.css';
 
 export default function AskNoStuffWidget({ isOpen, onToggle, onClose }) {
   const [currentStep, setCurrentStep] = useState(1);
-  const [formData, setFormData] = useState({
-    applianceRequest: '',
-    name: '',
-    phone: '',
-    email: '',
-    message: ''
-  });
+const [formData, setFormData] = useState({
+  leadType: 'Appliance Inquiry',
+  applianceRequest: '',
+  name: '',
+  phone: '',
+  email: '',
+  message: ''
+});
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -97,13 +98,14 @@ export default function AskNoStuffWidget({ isOpen, onToggle, onClose }) {
   };
 
   const handleReset = () => {
-    setFormData({
-      applianceRequest: '',
-      name: '',
-      phone: '',
-      email: '',
-      message: ''
-    });
+   setFormData({
+  leadType: 'Appliance Inquiry',
+  applianceRequest: '',
+  name: '',
+  phone: '',
+  email: '',
+  message: ''
+});
     setCurrentStep(1);
     setErrors({});
     setIsSubmitted(false);
@@ -131,9 +133,12 @@ export default function AskNoStuffWidget({ isOpen, onToggle, onClose }) {
           {/* Header Bar */}
           <div className="widget-header">
             <div className="widget-brand">
-              <span className="widget-icon">
-                <UserCheck size={18} />
-              </span>
+             <span className="widget-harry-avatar">
+  <img
+    src="/images/ask-harry.png"
+    alt="Harry Cole"
+  />
+</span>
               <div>
                 <h3 id="widget-title" className="widget-title">Ask Harry Cole</h3>
                 <span className="widget-subtitle">No Stuff Appliances • Chesapeake, VA</span>
@@ -174,7 +179,8 @@ export default function AskNoStuffWidget({ isOpen, onToggle, onClose }) {
                 <>
                   {/* Personal Greeting Bubble */}
                   <div className="chat-bubble bot-bubble">
-                    <p>Hi! I'm Harry. Confused about an appliance, size fit, or what's currently available? Tell me what you're looking for!</p>
+                    <p>
+  Hi! I'm Harry. Whether you're looking for an appliance or need help with appliance repair, tell me how I can help.</p>
                   </div>
 
                   {/* Step Progress Bar */}
@@ -187,11 +193,42 @@ export default function AskNoStuffWidget({ isOpen, onToggle, onClose }) {
 
                   {/* Step Forms */}
                   <form onSubmit={handleNext} className="widget-form">
-                    {currentStep === 1 && (
-                      <div className="step-content">
-                        <label htmlFor="applianceRequest" className="step-question">
-                          Step 1: What appliance or question can Harry help you with?
-                        </label>
+                   {currentStep === 1 && (
+  <div className="step-content">
+
+    <div className="step-question">
+      How can Harry help you today?
+    </div>
+
+    <div className="inquiry-type-options">
+
+      <button
+        type="button"
+        className={`inquiry-type-btn ${
+          formData.leadType === 'Appliance Inquiry' ? 'active' : ''
+        }`}
+        onClick={() => handleChange('leadType', 'Appliance Inquiry')}
+      >
+        Looking for an Appliance
+      </button>
+
+      <button
+        type="button"
+        className={`inquiry-type-btn ${
+          formData.leadType === 'Service Request' ? 'active' : ''
+        }`}
+        onClick={() => handleChange('leadType', 'Service Request')}
+      >
+        Need Appliance Repair / Service
+      </button>
+
+    </div>
+
+    <label htmlFor="applianceRequest" className="step-question inquiry-detail-question">
+      {formData.leadType === 'Service Request'
+        ? 'Tell Harry which appliance needs service and what is happening.'
+        : 'What appliance or question can Harry help you with?'}
+    </label>
                         <textarea
                           id="applianceRequest"
                           ref={inputRef}

@@ -5,18 +5,21 @@ import { galleryItems } from '../data/galleryData';
 import './GalleryPreview.css';
 
 export default function GalleryPreview({ onOpenAskWidget }) {
-  // Show first 3 preview items featuring real uploaded photos
+  // Show first 3 featured gallery items
   const previewItems = galleryItems.slice(0, 3);
 
   return (
     <section className="section gallery-preview-section">
       <div className="container">
         <div className="section-header text-center">
-          <span className="section-tag">Showroom & Inventory</span>
-          <h2>Real Appliance Photography</h2>
-          <p>
-            Take a look inside No Stuff Appliances in Chesapeake, VA. View our actual showroom units and inventory selections.
-          </p>
+         <span className="section-tag">Appliances & No Stuff</span>
+
+<h2>See What No Stuff Appliances Is All About</h2>
+
+<p>
+  Explore No Stuff Appliances, the types of major home appliances we offer,
+  and the local service you can expect when you shop with Harry in Chesapeake.
+</p>
         </div>
 
         <div className="gallery-preview-grid">

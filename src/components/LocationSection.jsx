@@ -48,7 +48,7 @@ export default function LocationSection() {
               <Clock size={22} className="loc-icon" />
               <div>
                 <strong>Hours & Viewing:</strong>
-                <p>Contact Harry Cole directly to confirm current viewing options and store availability.</p>
+                <p>Contact Diandra Atkinson directly to confirm current viewing options and store availability.</p>
               </div>
             </div>
 

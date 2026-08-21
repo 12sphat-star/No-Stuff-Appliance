@@ -1,7 +1,7 @@
 export const businessInfo = {
   name: "No Stuff Appliances",
   legalName: "No Stuff Appliances & Furniture",
-  contactPerson: "Harry Cole",
+  contactPerson: "Diandra Atkinson",
   ctaName: "Ask Harry",
   city: "Chesapeake",
   state: "VA",

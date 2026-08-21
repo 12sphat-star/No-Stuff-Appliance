@@ -33,7 +33,7 @@ export default function Home({ onOpenAskWidget }) {
 <WhyNoStuff onOpenAskWidget={onOpenAskWidget} />
 
       {/* 4. Featured Photos */}
-      <GalleryPreview />
+    <GalleryPreview onOpenAskWidget={onOpenAskWidget} />
 
       {/* 5. Ask No Stuff Lead Gen Section */}
       <AskNoStuffSection onOpenAskWidget={onOpenAskWidget} />

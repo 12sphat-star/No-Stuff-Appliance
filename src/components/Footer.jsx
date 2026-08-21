@@ -51,9 +51,9 @@ export default function Footer({ onOpenAskWidget }) {
   <a
     href="tel:+17575437133"
     className="footer-phone-link"
-    aria-label="Call Harry Cole at No Stuff Appliances"
+    aria-label="Call Diandra Atkinson at No Stuff Appliances"
   >
-    Harry Cole: {businessInfo.phone}
+    Diandra Atkinson: {businessInfo.phone}
   </a>
 </li>
               <li>
